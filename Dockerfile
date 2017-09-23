@@ -5,7 +5,7 @@ RUN a2enmod headers
 
 # install the PHP extensions we need
 RUN apt-get update \
-  && apt-get install -y libxml2-dev libxslt-dev libgraphicsmagick1-dev graphicsmagick libmcrypt-dev \
+  && apt-get install -y libxml2-dev libxslt-dev libgraphicsmagick1-dev graphicsmagick libmcrypt-dev vim \
   && rm -rf /var/lib/apt/lists/* \
   && docker-php-ext-install json gettext exif calendar soap xsl sockets wddx
 
