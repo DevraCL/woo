@@ -49,13 +49,13 @@ RUN { \
     echo "html_errors = off"; \
     echo "log_errors = On"; \
     echo "error_log = /dev/stderr"; \
+    echo "error_reporting = E_ALL"; \
     echo "ignore_repeated_errors = off"; \
     echo "ignore_repeated_source = off"; \
     echo "report_memleaks = on"; \
     echo "track_errors = on"; \
     echo "docref_root = 0"; \
     echo "docref_ext = 0"; \
-    echo "error_reporting = -1"; \
     echo "log_errors_max_len = 0"; \
   } > /usr/local/etc/php/conf.d/security.ini
 
