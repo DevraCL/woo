@@ -32,14 +32,14 @@ RUN { \
 # increase upload size
 # see http://php.net/manual/en/ini.core.php
 RUN { \
-    echo "upload_max_filesize = 90M"; \
+    echo "upload_max_filesize = 95M"; \
     echo "post_max_size = 100M"; \
   } > /usr/local/etc/php/conf.d/uploads.ini
 
 # Set Chile timezone
 RUN { \
     echo "date.timezone = \"America/Santiago\""; \
-  } > /usr/local/etc/php/conf.d/uploads.ini
+  } > /usr/local/etc/php/conf.d/timezone.ini
 
 # Iron the security of the Docker
 RUN { \
