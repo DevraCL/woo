@@ -32,8 +32,8 @@ RUN { \
 # increase upload size
 # see http://php.net/manual/en/ini.core.php
 RUN { \
-    echo "upload_max_filesize = 25M"; \
-    echo "post_max_size = 50M"; \
+    echo "upload_max_filesize = 90M"; \
+    echo "post_max_size = 100M"; \
   } > /usr/local/etc/php/conf.d/uploads.ini
 
 # Set Chile timezone
