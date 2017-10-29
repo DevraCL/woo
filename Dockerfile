@@ -9,9 +9,6 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/* \
   && docker-php-ext-install json gettext exif calendar soap xsl sockets wddx
 
-# install APCu from PECL
-RUN pecl -vvv install apcu && docker-php-ext-enable apcu
-
 # Install PHP mcrypt extension
 RUN docker-php-ext-install -j$(nproc) mcrypt
 
