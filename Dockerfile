@@ -12,9 +12,6 @@ RUN apt-get update \
 # Install PHP mcrypt extension
 RUN docker-php-ext-install -j$(nproc) mcrypt
 
-# install GMagick from PECL
-RUN pecl -vvv install gmagick-beta && docker-php-ext-enable gmagick
-
 # set recommended PHP.ini settings
 # see https://secure.php.net/manual/en/opcache.installation.php
 RUN { \
