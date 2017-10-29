@@ -1,4 +1,4 @@
-FROM wordpress:php7.1-apache
+FROM wordpress:php5.6-apache
 
 # enable extra Apache modules
 RUN a2enmod headers
