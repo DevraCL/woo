@@ -5,9 +5,9 @@ RUN a2enmod headers
 
 # install the PHP extensions we need
 RUN apt-get update \
-  && apt-get install -y libxml2-dev libxslt-dev libgraphicsmagick1-dev graphicsmagick libmcrypt-dev \
+  && apt-get install -y libxml2-dev libxslt-dev libgraphicsmagick1-dev zlib1g-dev graphicsmagick libmcrypt-dev \
   && rm -rf /var/lib/apt/lists/* \
-  && docker-php-ext-install json gettext exif calendar soap xsl sockets wddx
+  && docker-php-ext-install json gettext exif calendar soap xsl sockets wddx zip
 
 # install APCu from PECL
 RUN pecl -vvv install apcu && docker-php-ext-enable apcu
