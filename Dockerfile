@@ -7,7 +7,7 @@ RUN a2enmod headers
 RUN apt-get update \
   && apt-get install -y libxml2-dev libxslt-dev libgraphicsmagick1-dev graphicsmagick libmcrypt-dev \
   && rm -rf /var/lib/apt/lists/* \
-  && docker-php-ext-install json gettext exif calendar soap xsl sockets wddx
+  && docker-php-ext-install json gettext exif calendar soap xsl sockets wddx mysql
 
 # Install PHP mcrypt extension
 RUN docker-php-ext-install -j$(nproc) mcrypt
